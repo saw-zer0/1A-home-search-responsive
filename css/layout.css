@@ -93,7 +93,7 @@ li{
 
 
 .nav-wrapper{
-    width: fit-content;
+    width: 143px;
     min-height: 45px;
     /* change height to 300 to make nav visible */
     height: 0px;
@@ -163,14 +163,14 @@ li{
 }
 
 .aside-left {
-    /* change height: fit-content; to make aside-left visible */
+    /* change height: 332px; to make aside-left visible */
     min-height: 36px;
     height: 0px;
     overflow: hidden;
 }
 
 .aside-right{
-    /* change height: fit-content; to make aside-right visible */
+    /* change height: 324px; to make aside-right visible */
     min-height: 36px;
     height: 0px;
     overflow: hidden;
@@ -279,7 +279,7 @@ li{
 
 @media screen and (min-width:576px) {
     .header{
-        width: 100vw;
+        width: 100%;
     }
     .header-left{
         width: 90%;
@@ -305,10 +305,7 @@ li{
 }
 
 @media screen and (min-width: 768px){
-    /* .header-wrapper .nav-wrapper .main-section-wrapper .footer-wrapper{
-        width: 100%;
-        max-width: fit-content;
-    } */
+
     .header{
         width:100%;
     }
