@@ -321,6 +321,9 @@ li{
         width: 70%;
 
     }
+    .aside-left{
+        border-bottom: 1px solid #dddddd;
+    }
 
     .aside-right{
         float: right;

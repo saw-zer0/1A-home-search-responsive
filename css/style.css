@@ -103,7 +103,7 @@ li{
     font-family: Arial, sans-serif;
 }
 
-.nav-left li a:hover{
+.nav-left li:hover{
     background-color: #7dd9e8;
     color: #FFF;
 }

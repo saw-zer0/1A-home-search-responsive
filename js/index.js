@@ -1,8 +1,8 @@
-function expandHeight(element, finalHeight) {
+function expandHeight(element, finalHeight, speed) {
     var currentHeight = element.offsetHeight;
     var animation = setInterval(() => {
 
-        currentHeight += 5;
+        currentHeight += speed;
 
         if (currentHeight >= finalHeight) {
             clearInterval(animation);
@@ -15,11 +15,11 @@ function expandHeight(element, finalHeight) {
     }, 60 / 1000);
 
 }
-function collapseHeight(element, finalHeight) {
+function collapseHeight(element, finalHeight, speed) {
     var currentHeight = element.offsetHeight;
     var animation = setInterval(() => {
 
-        currentHeight -= 5;
+        currentHeight -= speed;
 
         if (currentHeight <= finalHeight) {
             clearInterval(animation);
@@ -46,10 +46,10 @@ hamburger.addEventListener("click", () => {
         hamburgerCollapse = false;
     }
     if (hamburgerCollapse) {
-        expandHeight(target, 300);
+        expandHeight(target, 300, 5);
         hamburgerCollapse = false;
     } else {
-        collapseHeight(target, 0);
+        collapseHeight(target, 0, 5);
         hamburgerCollapse = true;
     }
 })
@@ -60,10 +60,10 @@ asideLeftHeading.addEventListener("click", () => {
         asideLeftCollapse = false
     }
     if (asideLeftCollapse) {
-        expandHeight(target, 332);
+        expandHeight(target, 332, 5);
         asideLeftCollapse = false;
     } else {
-        collapseHeight(target, 0);
+        collapseHeight(target, 0, 5);
         asideLeftCollapse = true;
     }
 })
@@ -74,10 +74,10 @@ asideRightHeading.addEventListener("click", () => {
         asideRightCollapse = false;
     }
     if (asideRightCollapse) {
-        expandHeight(target, 324);
+        expandHeight(target, 324, 5);
         asideRightCollapse = false;
     } else {
-        collapseHeight(target, 0);
+        collapseHeight(target, 0, 5);
         asideRightCollapse = true;
     }
 })
@@ -85,24 +85,26 @@ asideRightHeading.addEventListener("click", () => {
 
 
 window.addEventListener('resize', () => {
-
-    console.log(window.innerWidth)
+    console.log("window size changed", window.innerWidth)
 
     if (window.innerWidth >= 992) {
         var asideLeft = document.getElementById("aside-left")
         var asideRight = document.getElementById("aside-right")
-        asideLeft.style.height = "652px";
+        expandHeight(asideLeft, 700, 10)
+        expandHeight(asideRight, 700, 10)
+
+        asideLeft.style.height = "700px";
         asideRight.style.height = "652px";
     }
     else if (window.innerWidth >= 768) {
-        collapseHeight(document.getElementById("nav-wrapper"), 0);
-        collapseHeight(document.getElementById("aside-left"), 0);
+        collapseHeight(document.getElementById("nav-wrapper"), 0, 5);
+        collapseHeight(document.getElementById("aside-left"), 0, 5);
         var asideRight = document.getElementById("aside-right");
         asideRight.style.height = "652px";
     }
     else {
-        collapseHeight(document.getElementById("nav-wrapper"), 0);
-        collapseHeight(document.getElementById("aside-left"), 0);
-        collapseHeight(document.getElementById("aside-right"), 0);
+        collapseHeight(document.getElementById("nav-wrapper"), 0, 5);
+        collapseHeight(document.getElementById("aside-left"), 0, 5);
+        collapseHeight(document.getElementById("aside-right"), 0, 5);
     }
 })
