@@ -1,5 +1,5 @@
 body{
-    width: 100%;
+    width: 100vw;
 
 }
 
@@ -39,6 +39,9 @@ li{
     margin: 0 auto;
 }
 
+.header-right div{
+    padding: 5px;
+}
 
 .search-wrapper{
     width: 278px;
@@ -103,7 +106,6 @@ li{
 .nav{
     position: relative;
     top: 45px;
-    height: 250;
     text-align: right;
     background-color: #f5f5f5;
     border: 1px solid #dddddd;
@@ -293,8 +295,139 @@ li{
     }
 
     .nav-wrapper{
-        top: 95px;
+        top: 115px;
     }
 
+}
+
+@media screen and (min-width: 768px){
+    .header-right{
+        float: right;
+    }
+
+    .main-section{
+        overflow: auto;
+    }
+    .section-mid-wrapper{
+        float: left;
+        width: 70%;
+
+    }
+
+    .aside-right{
+        float: right;
+        width: 29%;
+        height: 100%;
+
+    }
+    .aside-right .aside-content-wrapper{
+        height: 606px;
+    }
+
+    .footer-left{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header{
+        padding: 20px 20px;
+    }
+    .header-left{
+        width: 55%;
+        margin: 0px;
+        float: left;
+    }
+    .search-wrapper{
+        float: left;
+        padding-left: 20px;
+    }
+
+    .header-right{
+        width: 35%;
+    }
+
+    .nav-hamburger-icon{
+        display: none;
+    }
+
+    .nav-wrapper{
+        position:relative;
+        top: 0;
+        left: 0px;
+        width: 100%;
+    }
+    .nav{
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        text-align: left;
+        background-color: #f5f5f5;
+        border: none;
+    }
+    .nav li , .nav-right-wrapper span{
+        display: inline;
+    }
+
+    .nav-left{
+        float: left;
+        padding-top: 15px;
+    }
+
+    .nav-right-wrapper{
+        float: right;
+        padding: 12px 20px;
+    }
+    
+    .nav-right-wrapper img{
+        position: relative;
+        top: 3px;
+        margin-right: 3px;
+    }
+
+    .main-section{
+        position: relative;
+    }
+
+    .aside-left{
+        width: 23%;
+        height: auto;
+        float: left;
+    }
+
+    .aside-left-bottom{
+        height: 540px;
+    }
+
+    .section-mid-wrapper{
+        width: 50%;
+        position: absolute;
+        left: 25%;
+    }
+
+    .aside-right{
+        width: 23%;
+        float: right;
+    }
+
+    .aside-heading{
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .aside-content{
+        overflow: auto;
+    }
+    .aside-content-text{
+        padding-left: 5px;
+        float:left;
+        text-align: left;
+        width: 60%;
+    }
+    .aside-content img{
+        float:right;
+        padding-right: 5px;
+    }
 
 }
+
